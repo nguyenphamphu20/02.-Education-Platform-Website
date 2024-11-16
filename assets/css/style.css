@@ -2,6 +2,10 @@
     box-sizing: border-box;
 }
 
+:root {
+    --primary: #ffb900;
+}
+
 html {
     font-size: 62.5%;
 }
@@ -9,4 +13,95 @@ html {
 body {
     font-size: 1.6 rem;
     font-family: Poppins, sans-serif;
+}
+/* common */
+.content {
+    width: 1170px;
+    max-width: calc(100% - 16px);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+a {
+    text-decoration: none;
+    transition: ease 0.25s;
+}
+
+.btn {
+    color: #fff;
+    font-family: Poppins;
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 1.75;
+    text-align: center;
+    border-radius: 24.5px;
+    background: #171100;
+    transition: ease 0.2s;
+}
+
+.btn:hover {
+    background-color: var(--primary);
+}
+
+/* header */
+
+.header {
+    margin-top: 36px;
+}
+
+.nav-bar {
+    display: flex;
+    align-items: center;
+}
+
+.nav-bar .logo,
+.nav-bar .container {
+    flex: 1;
+}
+
+.nav-bar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-bar .group-link {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.nav-bar .item-group {
+    padding: 11px 0;
+}
+
+.nav-bar .item-group a {
+    color: #5f5b53;
+    font-family: Poppins;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.75;
+    position: relative;
+}
+
+.nav-bar .item-group:hover a {
+    color: #171100;
+    font-weight: 600;
+}
+
+.nav-bar .item-group:hover a::before {
+    content: "";
+    background-color: #171100;
+    width: 14px;
+    height: 3px;
+    border-radius: 999px;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+
+.nav-bar .btn-sign-up {
+    min-width: 144px;
+    padding-top: 11px;
+    padding-bottom: 11px;
 }
