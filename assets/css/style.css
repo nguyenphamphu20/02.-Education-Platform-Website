@@ -4,6 +4,8 @@
 
 :root {
     --primary: #ffb900;
+    --secondary: #171100;
+    --normal: #5f5b53;
 }
 
 html {
@@ -13,6 +15,7 @@ html {
 body {
     font-size: 1.6 rem;
     font-family: Poppins, sans-serif;
+    background: #fffcf4;
 }
 /* common */
 .content {
@@ -34,8 +37,7 @@ a {
     font-weight: 600;
     line-height: 1.75;
     text-align: center;
-    border-radius: 24.5px;
-    background: #171100;
+    background: var(--secondary);
     transition: ease 0.2s;
 }
 
@@ -44,7 +46,7 @@ a {
 }
 
 /* header */
-
+/* nav */
 .header {
     margin-top: 36px;
 }
@@ -76,7 +78,7 @@ a {
 }
 
 .nav-bar .item-group a {
-    color: #5f5b53;
+    color: var(--normal);
     font-family: Poppins;
     font-size: 1.6rem;
     font-weight: 400;
@@ -85,13 +87,13 @@ a {
 }
 
 .nav-bar .item-group:hover a {
-    color: #171100;
+    color: var(--secondary);
     font-weight: 600;
 }
 
 .nav-bar .item-group:hover a::before {
     content: "";
-    background-color: #171100;
+    background-color: var(--secondary);
     width: 14px;
     height: 3px;
     border-radius: 999px;
@@ -102,6 +104,101 @@ a {
 
 .nav-bar .btn-sign-up {
     min-width: 144px;
+    border-radius: 24.5px;
     padding-top: 11px;
     padding-bottom: 11px;
+}
+
+/* hero */
+
+.hero {
+    margin-top: 64px;
+}
+.hero .row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hero .container {
+    width: 485px;
+}
+.hero .img-hero {
+    width: 470px;
+    max-width: 100%;
+    height: 685px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.hero .container .title {
+    color: var(--secondary);
+    font-family: Sen;
+    font-size: 5.8rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.17;
+    letter-spacing: -1.16px;
+}
+
+.hero .container .desc {
+    margin-top: 22px;
+    color: var(--normal);
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.67;
+}
+
+.hero .group-actions {
+    margin-top: 38px;
+    display: flex;
+    align-items: center;
+}
+
+.hero .group-actions .cta {
+    border-radius: 32px;
+    min-width: 180px;
+    padding: 17px 33px;
+    background-color: var(--primary);
+}
+
+.hero .group-actions .play-action {
+    margin-right: 4px;
+    margin-left: 28px;
+}
+
+.hero .group-actions span {
+    color: var(--secondary);
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.67;
+}
+
+.hero .subtitle {
+    margin-top: 48px;
+    color: var(--normal);
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 1.67;
+}
+
+.hero .data {
+    margin-top: 8px;
+}
+
+.hero .data strong {
+    color: var(--secondary);
+    font-family: Sen;
+    font-size: 4.4rem;
+    font-weight: 700;
+    line-height: 1.22;
+}
+
+.hero .data span {
+    display: inline-block;
+    margin-left: 6px;
+    margin-right: 28px;
+    color: var(--normal);
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 1.22;
 }
