@@ -636,6 +636,7 @@ a {
 }
 
 .blog-info .question {
+    margin-top: 12px;
     color: var(--secondary);
     font-size: 16px;
     font-weight: 600;
