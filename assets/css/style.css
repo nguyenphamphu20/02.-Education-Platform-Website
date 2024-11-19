@@ -17,7 +17,7 @@ body {
     font-family: Poppins, sans-serif;
 }
 /* common */
-.content {
+.main-content {
     width: 1170px;
     max-width: calc(100% - 16px);
     margin-left: auto;
@@ -52,12 +52,15 @@ a {
     overflow: hidden;
 }
 
-/* header */
 /* nav */
-.header {
-    padding-top: 36px;
-    padding-bottom: 65px;
+.header-fixed {
     background: #fffcf4;
+    padding-top: 36px;
+    padding-bottom: 8px;
+    position: sticky;
+    left: 0;
+    top: -28px;
+    z-index: 1;
 }
 
 .nav-bar {
@@ -80,36 +83,54 @@ a {
 .nav-bar .group-link {
     display: flex;
     align-items: center;
-    gap: 40px;
+    margin-left: -12px;
 }
 
 .nav-bar .item-group {
-    padding: 11px 0;
+    padding: 0 21px;
 }
 
 .nav-bar .item-group a {
+    display: inline-block;
     color: var(--normal);
     font-family: Poppins;
     font-size: 1.6rem;
     font-weight: 400;
     line-height: 1.75;
-    position: relative;
 }
 
 .nav-bar .item-group:hover a {
     color: var(--secondary);
     font-weight: 600;
+    text-align: center;
 }
 
-.nav-bar .item-group:hover a::before {
+.nav-bar .item-group.active {
+    position: relative;
+}
+
+.nav-bar .item-group.active a {
+    font-weight: 600;
+}
+
+.nav-bar .item-group a::before {
+    content: attr(title);
+    display: block;
+    font-weight: 600;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+.nav-bar .item-group.active::before {
     content: "";
     background-color: var(--secondary);
     width: 14px;
     height: 3px;
     border-radius: 999px;
     position: absolute;
-    bottom: -5px;
-    left: 0;
+    bottom: 0;
+    left: 21px;
 }
 
 .nav-bar .btn-sign-up {
@@ -118,12 +139,16 @@ a {
     padding-top: 11px;
     padding-bottom: 11px;
 }
+/* header */
+
+.header {
+    padding-top: 56px;
+    padding-bottom: 65px;
+    background: #fffcf4;
+}
 
 /* hero */
 
-.hero {
-    margin-top: 64px;
-}
 .hero .row {
     display: flex;
     justify-content: space-between;
@@ -727,7 +752,7 @@ a {
     margin-top: 12px;
 }
 
-.footer .content > .part-way {
+.footer .main-content > .part-way {
     width: 1170px;
     margin-top: 38px;
 }
