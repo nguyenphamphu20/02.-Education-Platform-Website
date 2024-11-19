@@ -52,12 +52,15 @@ a {
     overflow: hidden;
 }
 
-/* header */
 /* nav */
-.header {
-    padding-top: 36px;
-    padding-bottom: 65px;
+.header-fixed {
     background: #fffcf4;
+    padding-top: 36px;
+    padding-bottom: 8px;
+    position: sticky;
+    left: 0;
+    top: -28px;
+    z-index: 1;
 }
 
 .nav-bar {
@@ -118,12 +121,16 @@ a {
     padding-top: 11px;
     padding-bottom: 11px;
 }
+/* header */
+
+.header {
+    padding-top: 56px;
+    padding-bottom: 65px;
+    background: #fffcf4;
+}
 
 /* hero */
 
-.hero {
-    margin-top: 64px;
-}
 .hero .row {
     display: flex;
     justify-content: space-between;
